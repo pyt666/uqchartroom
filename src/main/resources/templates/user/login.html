@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>UQ聊天室</title>
+</head>
+<body>
+<div>
+    <form th:action="@{/user/add}" th:method="post" onsubmit="return check()">
+    <div>请输入昵称:</div>
+    <div><input id="username" th:name="name" type="text" placeholder="张三哈哈哈"/></div>
+        <div><button type="submit" >去聊天</button></div>
+    </form>
+    <script th:src="@{classpath:static/js/jquery.min.js}"></script>
+    <script th:src="@{classpath:static/js/login.js}" th:inline="javascript"></script>
+</div>
+</body>
+</html>
